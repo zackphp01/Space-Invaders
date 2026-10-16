@@ -84,7 +84,46 @@ function createEnemies(){
 
   for (let row = 0, row < ENEMY_ROWS; row+){
     for (let col = 0; col < ENEMY_COLS; col++){
-      
+enemies push ({
+  x: startX + col * spacingX,
+  y: startX + col * spacingY,
+  width: 36,
+  height: 28,
+  alive: true
+})
     }
+  }
+}
+
+// ==========================================================================
+// ================================ATIRAR====================================
+// ==========================================================================
+
+function shoot(){
+  bullets.push({
+    x: player.x + player.width/2 - 2,
+    y: player.y,
+    width: 4,
+    height: 12,
+  });
+}
+// ==========================================================================
+// ============================MOVIMENTO JOGADOR=============================
+// ==========================================================================
+
+function uptadePlayer(){
+  if (keys["ArrowLeft"] || keys["KeyA"]){
+      player.x -= player,speed;  
+  }
+  if (keys["ArrowRigth"] || keys["KeyD"]){
+      player.x += player,speed;  
+  }
+
+  if(player.x < 0){
+    player.x = 0
+  }
+
+  if (player.x + player.width > canvas.width){
+      player.x = player.width - canvas.width;    
   }
 }
