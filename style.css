@@ -1,0 +1,31 @@
+* {
+
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background:
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+
+   font-family: monospace;
+   color: #ff0000;
+}
+
+.game-container {
+border: 3px solid #d4fd08;
+box-shadow: 0 0 20px #fafafa;
+}
+
+canvas {
+display: block;
+image-rendering: pixelated;
+background-image: url("./img/space-background.gif");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+}
